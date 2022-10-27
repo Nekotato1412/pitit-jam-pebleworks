@@ -8,5 +8,11 @@ export (NodePath) var minigame
 func _on_MiniGameObject_activated():
 	if !used:
 		used = true
-		get_node(minigame).show()
-		
+		var mgNode = get_node(minigame)
+		mgNode.connect("done", self, "_on_minigame_done")
+		mgNode.show()
+
+func _on_minigame_done():
+	var mgNode = get_node(minigame)
+	mgNode.hide()
+	mgNode.queue_free()
