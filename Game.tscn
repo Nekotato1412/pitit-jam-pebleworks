@@ -148,6 +148,7 @@ current = true
 [node name="MiniGameObject" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 6 )
 minigame = NodePath("Minigame")
+player_loc = NodePath("../Player")
 
 [node name="Minigame" parent="MiniGameObject" instance=ExtResource( 6 )]
 visible = false

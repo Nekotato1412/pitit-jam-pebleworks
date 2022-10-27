@@ -2,9 +2,11 @@ extends KinematicBody
 
 export (float) var speed = 1.0
 export (float) var sprintMultiplier = 2.0
+export (bool) var locked
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
+	if self.locked: return
 	var velocity = Vector3.ZERO
 	
 	if Input.is_action_pressed("move_right"):
