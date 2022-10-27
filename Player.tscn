@@ -22,3 +22,8 @@ shape = SubResource( 1 )
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.703502, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
