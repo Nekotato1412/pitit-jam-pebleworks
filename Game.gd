@@ -8,7 +8,7 @@ onready var Player = $Player
 func _on_Game_Time_timeout():
 	pass # Replace with function body.
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	Camera.translation.x = Player.translation.x
 
 # warning-ignore:unused_argument
