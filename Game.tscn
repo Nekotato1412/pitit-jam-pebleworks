@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Table.tscn" type="PackedScene" id=2]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game.gd" type="Script" id=4]
+[ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/kitchen_room.dae" type="PackedScene" id=7]
 
 [sub_resource type="BoxShape" id=5]
@@ -17,14 +18,16 @@ wait_time = 120.0
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.72758 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, -3.59989e-21, -8.74227e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, -0.28364, 10.1848, -7.65789 )
+transform = Transform( -1, -3.59989e-21, -8.74227e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, -0.28364, 10.1848, -12.6757 )
 current = true
 
 [node name="Room" type="StaticBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="kitchen_room" parent="Room" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 0 )
@@ -45,6 +48,102 @@ shape = SubResource( 5 )
 transform = Transform( -2.18557e-07, 0, 1, 0, 4, 0, -5, 0, -4.37114e-08, -7.01408, 0, -0.0112858 )
 shape = SubResource( 5 )
 
-[node name="Table" parent="." instance=ExtResource( 2 )]
+[node name="Layout" type="Spatial" parent="."]
+
+[node name="Table" parent="Layout" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -12.9645, 0, 0 )
+
+[node name="Table2" parent="Layout" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -12.9645, 0, -2 )
+
+[node name="Table3" parent="Layout" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -12.9645, 0, -4 )
+
+[node name="Table4" parent="Layout" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -12.9645, 0, 2 )
+
+[node name="Table5" parent="Layout" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -12.9645, 0, 4 )
+
+[node name="Box" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 1, -7.70686, 0.461435, 2.0402 )
+
+[node name="Box19" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 1, -7.70686, 0.461435, -2.02621 )
+
+[node name="Box20" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 1, -7.70686, 0.461435, -2.02621 )
+
+[node name="Box21" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 1, -7.69746, 0.461435, -5.95192 )
+
+[node name="Box2" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 1, -7.70686, 0.461435, 4.03202 )
+
+[node name="Box3" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 1, -7.70686, 0.461435, 6.03125 )
+
+[node name="Box4" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -6.2005, 0.461435, 6.53978 )
+
+[node name="Box5" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -4.2005, 0.461435, 6.53978 )
+
+[node name="Box6" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -2.2005, 0.461435, 6.53978 )
+
+[node name="Box7" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -0.200497, 0.461435, 6.53978 )
+
+[node name="Box10" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -0.200497, 0.461435, 1.53978 )
+
+[node name="Box11" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, 1.7995, 0.461435, 1.53978 )
+
+[node name="Box12" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -2.2005, 0.461435, 1.53978 )
+
+[node name="Box13" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -4.2005, 0.461435, 1.53978 )
+
+[node name="Box14" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -4.2005, 0.461435, -1.46022 )
+
+[node name="Box15" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -2.2005, 0.461435, -1.46022 )
+
+[node name="Box16" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -2.2005, 0.461435, -1.46022 )
+
+[node name="Box17" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -0.200497, 0.461435, -1.46022 )
+
+[node name="Box22" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -0.200497, 0.461435, -6.46022 )
+
+[node name="Box26" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, 1.7995, 0.461435, -6.46022 )
+
+[node name="Box27" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -0.5, 0, -8.74228e-08, 0, 1.25, 0, 4.37114e-08, 0, -1, 3.30277, 0.461435, -5.93898 )
+
+[node name="Box23" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -2.2005, 0.461435, -6.46022 )
+
+[node name="Box24" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -4.2005, 0.461435, -6.46022 )
+
+[node name="Box25" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, -6.2005, 0.461435, -6.46022 )
+
+[node name="Box18" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, 1.7995, 0.461435, -1.46022 )
+
+[node name="Box8" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, 1.7995, 0.461435, 6.53978 )
+
+[node name="Box9" parent="Layout" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 0, 1, 0, 1.25, 0, -0.5, 0, -4.37114e-08, 3.7995, 0.461435, 6.53978 )
 
 [connection signal="timeout" from="Game Time" to="." method="_on_Game_Time_timeout"]
