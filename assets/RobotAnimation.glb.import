@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/RobotAnimation.fbx-4b7405841158f1ba7eeea9247eabca83.scn"
+path="res://.import/RobotAnimation.glb-0b9ef535475cccc2a8abb73da34f66dd.scn"
 
 [deps]
 
-source_file="res://assets/RobotAnimation.fbx"
-dest_files=[ "res://.import/RobotAnimation.fbx-4b7405841158f1ba7eeea9247eabca83.scn" ]
+source_file="res://assets/RobotAnimation.glb"
+dest_files=[ "res://.import/RobotAnimation.glb-0b9ef535475cccc2a8abb73da34f66dd.scn" ]
 
 [params]
 
